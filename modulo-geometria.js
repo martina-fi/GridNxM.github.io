@@ -27,15 +27,15 @@ var FIGURE = 'esfera';
 
 var FIGURES = {
     plano: new Plano(3,3),
-    esfera: new Esfera(3),
-    tubosenoidal: new TuboSenoidal(.3,0.1,1,4)
+    esfera: new Esfera(1),
+    tubosenoidal: new TuboSenoidal(0.3,0.1,1,4)
 };
 
 var superficie3D;
 var mallaDeTriangulos;
 
-var filas=30;
-var columnas=30;
+var filas=100;
+var columnas=100;
 
 
 function crearGeometria(){
@@ -115,10 +115,6 @@ function TuboSenoidal(amplitud, long, radio, altura) {
     }
 }
 
-
-
-
-
 function generarSuperficie(superficie,filas,columnas){
     
     positionBuffer = [];
@@ -152,7 +148,6 @@ function generarSuperficie(superficie,filas,columnas){
     }
 
     // Buffer de indices de los triángulos
-
     var colsVert = columnas + 1;
     
     indexBuffer=[];
