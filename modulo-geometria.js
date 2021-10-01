@@ -23,7 +23,7 @@
     
 */
 
-var FIGURE = 'esfera';
+var FIGURE = 'tubosenoidal';
 
 var FIGURES = {
     plano: new Plano(3,3),
