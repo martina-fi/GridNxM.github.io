@@ -23,7 +23,16 @@
     
 */
 
-var FIGURE = 'tubosenoidal';
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+    function(m,key,value) {
+    vars[key] = value;
+    });
+    return vars;
+}
+
+var FIGURE = new String(getUrlVars()["forma"])
 
 var FIGURES = {
     plano: new Plano(3,3),
